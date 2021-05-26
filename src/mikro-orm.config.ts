@@ -8,11 +8,10 @@ const config = {
   entities: [Author, Book, BookTag, Publisher, BaseEntity],
   dbName: 'mikro-orm-nest-ts',
   type: 'mysql',
-  port: 3307,
   highlighter: new SqlHighlighter(),
   debug: true,
   logger: logger.log.bind(logger),
-  password: 'root'
+  clientUrl: process.env.ENV === 'dev' ? 'mysql://root:root@localhost:3306' : 'mysql://root:root@localhost:3306',
 } as Options;
 
 export default config;

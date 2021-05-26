@@ -12,6 +12,7 @@ const config = {
   highlighter: new SqlHighlighter(),
   debug: true,
   logger: logger.log.bind(logger),
+  password: 'root'
 } as Options;
 
 export default config;
